@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIFerreira", "APIFerreira\APIFerreira.csproj", "{CE9C7247-C53F-4FB8-8FD4-42E865471E20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "admFerreira", "admFerreira\admFerreira.csproj", "{91F468D7-31AD-4B15-AC6D-7D841E0D978C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CE9C7247-C53F-4FB8-8FD4-42E865471E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE9C7247-C53F-4FB8-8FD4-42E865471E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE9C7247-C53F-4FB8-8FD4-42E865471E20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F468D7-31AD-4B15-AC6D-7D841E0D978C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F468D7-31AD-4B15-AC6D-7D841E0D978C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F468D7-31AD-4B15-AC6D-7D841E0D978C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F468D7-31AD-4B15-AC6D-7D841E0D978C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
