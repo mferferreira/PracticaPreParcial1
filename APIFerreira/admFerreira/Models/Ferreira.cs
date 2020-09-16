@@ -23,7 +23,7 @@ namespace admFerreira.Models
 
         [DisplayName("Cumpleaños")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0: dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Birthdate { get; set; }
     }
     public enum Place
