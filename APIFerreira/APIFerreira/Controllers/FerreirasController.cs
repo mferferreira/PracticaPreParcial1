@@ -15,15 +15,17 @@ namespace APIFerreira.Controllers
     public class FerreirasController : ApiController
     {
         private DataContext db = new DataContext();
-        [Authorize]
+
         // GET: api/Ferreiras
+        [Authorize]
         public IQueryable<Ferreira> GetFerreiras()
         {
             return db.Ferreiras;
         }
 
-        [Authorize]
+
         // GET: api/Ferreiras/5
+        [Authorize]
         [ResponseType(typeof(Ferreira))]
         public IHttpActionResult GetFerreira(int id)
         {
@@ -36,8 +38,9 @@ namespace APIFerreira.Controllers
             return Ok(ferreira);
         }
 
-        [Authorize]
+
         // PUT: api/Ferreiras/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutFerreira(int id, Ferreira ferreira)
         {
@@ -72,8 +75,8 @@ namespace APIFerreira.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        [Authorize]
         // POST: api/Ferreiras
+        [Authorize]
         [ResponseType(typeof(Ferreira))]
         public IHttpActionResult PostFerreira(Ferreira ferreira)
         {
@@ -88,8 +91,9 @@ namespace APIFerreira.Controllers
             return CreatedAtRoute("DefaultApi", new { id = ferreira.FerreiraID }, ferreira);
         }
 
-        [Authorize]
+
         // DELETE: api/Ferreiras/5
+        [Authorize]
         [ResponseType(typeof(Ferreira))]
         public IHttpActionResult DeleteFerreira(int id)
         {

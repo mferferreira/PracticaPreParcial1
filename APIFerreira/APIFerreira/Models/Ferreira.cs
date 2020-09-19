@@ -19,7 +19,7 @@ namespace APIFerreira.Models
         public string FriendofFerreira { get; set; }
 
         [Required(ErrorMessage = "Debe ingresar el lugar")]
-        public Place place { get; set; }
+        public CategoryType place { get; set; }
 
         [EmailAddress(ErrorMessage= "Ingrese email en el formato correcto")]
         public string Email { get; set; }
@@ -29,12 +29,12 @@ namespace APIFerreira.Models
         [DisplayFormat(DataFormatString = "{0: dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Birthdate { get; set; }
     }
-        public enum Place
+        public enum CategoryType
     {
-        Registro1 = 1, 
-        Registro2 = 2,
-        Registro3 = 3,
-        Registro4 = 4,
-        Registro5 = 5
+        Universidad = 10,
+        Plaza = 20,
+        Colegio = 30,
+        Piscina = 40,
+        Cine = 50
     }
 }

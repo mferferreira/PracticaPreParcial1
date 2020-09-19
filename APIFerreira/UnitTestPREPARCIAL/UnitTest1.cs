@@ -6,98 +6,85 @@ using APIFerreira.Controllers;
 using APIFerreira.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestFerreira.test
+namespace UnitTestPREPARCIAL
 {
     [TestClass]
     public class UnitTest1
     {
-        //Get
         [TestMethod]
-        public void TestMethodGet()
-        {
+        public void TestGet()
+        { 
             //Arrange
-            FerreirasController controller = new FerreirasController();
-
-
+            FerreirasController controlador = new FerreirasController();
             //Act
-            var listaFerreira = controller.GetFerreiras();
+            var listaFerreira = controlador.GetFerreiras();
 
             //Assert
             Assert.IsNotNull(listaFerreira);
         }
-
-        //Post
         [TestMethod]
-        public void TestMethodPost()
-        {
-            //Arrange
-            FerreirasController controller = new FerreirasController();
-            Ferreira esperado = new Ferreira()
-            {
-                FerreiraID = 1,
-                FriendofFerreira = "Luciana",
-                place = CategoryType.Cine,
-                Email = "lucianaag@hotmail.com",
-                Birthdate = DateTime.Today
-
-            };
-
-
-            //Act
-            IHttpActionResult actionResult = controller.PostFerreira(esperado);
-            var resultadoCreado = actionResult as CreatedAtRouteNegotiatedContentResult<Ferreira>;
-
-            //Assert
-            Assert.IsNotNull(resultadoCreado);
-            Assert.AreEqual("DefaultApi", resultadoCreado.RouteName);
-            Assert.AreEqual(esperado.FriendofFerreira, resultadoCreado.Content.FriendofFerreira);
-        }
-
-
-        //Delete
-        [TestMethod]
-        public void TestMethodDelete()
-        {
-            //Arrange
-            FerreirasController controller = new FerreirasController();
-            Ferreira esperado = new Ferreira()
-            {
-                FerreiraID = 1,
-                FriendofFerreira = "Luciana",
-                place = CategoryType.Cine, 
-                Email = "Lucianaa@hotmail.com",
-                Birthdate = DateTime.Today
-
-            };
-
-
-            //Act
-            var ListaFerreira = controller.PostFerreira(esperado);
-            var resultadoEliminado = controller.DeleteFerreira(esperado.FerreiraID);
-
-            //Assert
-            Assert.IsInstanceOfType(resultadoEliminado, typeof(OkNegotiatedContentResult<Ferreira>));
-
-        }
-
-
-        //Put
-        [TestMethod]
-        public void TestMethodPut()
+        public void TestPost()
         {
             //Arrange
             FerreirasController controlador = new FerreirasController();
             Ferreira prueba = new Ferreira()
             {
-                FerreiraID = 1,
+                FerreiraID = 5,
                 FriendofFerreira = "Luciana",
                 place = CategoryType.Cine,
-                Email = "lucianaa@hotmail.com",
+                Email = "lucianaa@gmail.com",
                 Birthdate = DateTime.Today
+                
             };
             //Act
-            var ListaFerreira = controlador.PostFerreira(prueba);
-            prueba.FriendofFerreira = "Marcela";
+            var listaFerreira = controlador.PostFerreira(prueba);
+            var resultadoCreado = listaFerreira as CreatedAtRouteNegotiatedContentResult<Ferreira>;
+
+            //Assert
+            Assert.IsNotNull(resultadoCreado);
+            Assert.AreEqual("DefaultApi", resultadoCreado.RouteName);
+            Assert.AreEqual(prueba.FerreiraID, resultadoCreado.Content.FerreiraID);
+        }
+
+        [TestMethod]
+        public void TestDelete()
+        {
+            //Arrange
+            FerreirasController controlador = new FerreirasController();
+            Ferreira prueba = new Ferreira()
+            {
+                FerreiraID = 5,
+                FriendofFerreira = "Luciana",
+                place = CategoryType.Cine,
+                Email = "luciana@gmail.com",
+                Birthdate = DateTime.Today
+               
+            };
+            //Act
+            var listaFerreira = controlador.PostFerreira(prueba);
+            var resultadoEliminado = controlador.DeleteFerreira(prueba.FerreiraID);
+
+            //Assert
+            Assert.IsInstanceOfType(resultadoEliminado, typeof(OkNegotiatedContentResult<Ferreira>));
+        }
+
+        [TestMethod]
+        public void TestPut()
+        {
+            //Arrange
+            FerreirasController controlador = new FerreirasController();
+            Ferreira prueba = new Ferreira()
+            {
+                FerreiraID = 5,
+                FriendofFerreira = "Luciana",
+                place = CategoryType.Cine,
+                Email = "cosa@gmail.com",
+                Birthdate = DateTime.Today
+                
+            };
+            //Act
+            var listaFerreira = controlador.PostFerreira(prueba);
+            prueba.FriendofFerreira = "Luciana";
             var resultadoCreado = controlador.PutFerreira(prueba.FerreiraID, prueba) as StatusCodeResult;
 
             //Assert
@@ -105,7 +92,6 @@ namespace UnitTestFerreira.test
             Assert.AreEqual(HttpStatusCode.NoContent, resultadoCreado.StatusCode);
             Assert.IsInstanceOfType(resultadoCreado, typeof(StatusCodeResult));
         }
-
-
     }
+   
 }

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIFerreira", "APIFerreira\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "admFerreira", "admFerreira\admFerreira.csproj", "{91F468D7-31AD-4B15-AC6D-7D841E0D978C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestFerreira.test", "UnitTestFerreira.test\UnitTestFerreira.test.csproj", "{425B1D29-8A6F-4864-9076-2FD9BF2568AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestPREPARCIAL", "UnitTestPREPARCIAL\UnitTestPREPARCIAL.csproj", "{210D17FB-EEFA-422C-A49F-238515D4D14D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{91F468D7-31AD-4B15-AC6D-7D841E0D978C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91F468D7-31AD-4B15-AC6D-7D841E0D978C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91F468D7-31AD-4B15-AC6D-7D841E0D978C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{425B1D29-8A6F-4864-9076-2FD9BF2568AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{425B1D29-8A6F-4864-9076-2FD9BF2568AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{425B1D29-8A6F-4864-9076-2FD9BF2568AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{425B1D29-8A6F-4864-9076-2FD9BF2568AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{210D17FB-EEFA-422C-A49F-238515D4D14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{210D17FB-EEFA-422C-A49F-238515D4D14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{210D17FB-EEFA-422C-A49F-238515D4D14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{210D17FB-EEFA-422C-A49F-238515D4D14D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
